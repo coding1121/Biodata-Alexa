@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Diri</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: linear-gradient(135deg, #f9f9f9, #d3e0ea); /* Gradient background */
+        }
+
+        .header {
+            background: linear-gradient(45deg, #007bff, #00d2ff); /* Gradient header background */
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+            border-bottom: 3px solid #007bff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 3em;
+            font-weight: 600;
+        }
+
+        .header .title {
+            font-size: 1.5em;
+            font-weight: 400;
+            margin-top: 10px;
+        }
+
+        .header .button a {
+            text-decoration: none;
+        }
+
+        .header button {
+            padding: 12px 30px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+        }
+
+        .header button:hover {
+            background-color: #45a049;
+        }
+
+        section {
+            padding: 30px 0;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1.5s ease-out forwards;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        .container > img {
+            max-width: 100%;
+            border-radius: 50%;
+            width: 180px;
+            height: 180px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            animation: photoAnimation 3s ease-in-out infinite;
+            border: 5px solid #fff;
+        }
+
+        @keyframes photoAnimation {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 15px;
+            color: #007bff;
+            font-size: 2.2em;
+        }
+
+        p, ul {
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 8px 0;
+            font-size: 1.1em;
+        }
+
+        .skill {
+            margin: 20px 0;
+        }
+
+        .progress-bar {
+            background: #ddd;
+            border-radius: 20px;
+            height: 20px;
+            margin-top: 8px;
+        }
+
+        .progress {
+            background: #007bff;
+            height: 100%;
+            color: white;
+            text-align: center;
+            line-height: 20px;
+            font-size: 14px;
+            border-radius: 20px;
+        }
+
+        form {
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label {
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        form input, form textarea {
+            margin-bottom: 20px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: border-color 0.3s ease;
+        }
+
+        form input:focus, form textarea:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        form button {
+            padding: 12px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background 0.3s ease;
+        }
+
+        form button:hover {
+            background: #0056b3;
+        }
+
+        .footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s, transform 1s;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .show-on-scroll {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .show-on-scroll.visible {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <img src="contoh.jpg" alt="Alexa">
+            <h1>Biodata Diri</h1>
+            <p class="title">Alexa Yuri Damayanti</p>
+            <p><strong>X PPLG 1</strong></p>
+            <div class="button">
+                <a href="https://wa.me/6289505217257" target="_blank">
+                    <button>Hubungi</button>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="about fade-up">
+        <div class="container">
+            <h2>Tentang Saya</h2>
+            <p>Halo! Nama saya <strong>Alexa</strong>, seorang <strong>Pelajar</strong> yang sedang mengejar mimpi dan berkembang di bidang teknologi.</p>
+        </div>
+    </section>
+
+    <section class="details fade-up">
+        <div class="container">
+            <h2>Detail Pribadi</h2>
+            <ul>
+                <li><strong>Nama Lengkap:</strong> Alexa Yuri Damayanti.</li>
+                <li><strong>Tanggal Lahir:</strong> 3 Januari 2009.</li>
+                <li><strong>Jenis Kelamin:</strong> Perempuan.</li>
+                <li><strong>Agama:</strong> Kristen.</li>
+                <li><strong>Alamat:</strong> Jalan Sadang No.79, Margahayu Tengah, Margahayu, Bandung.</li>
+                <li><strong>Jenjang Pendidikan:</strong> SMK.</li>
+                <li><strong>Hobi:</strong> Mendengarkan Musik.</li>
+                <li><strong>Cita Cita:</strong> Pembisnis.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="skills fade-up">
+        <div class="container">
+            <h2>Kemampuan</h2>
+            <div class="skill">
+                <span>HTML</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 60%;">60%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>CSS</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 40%;">40%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>JavaScript</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 20%;">20%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact fade-up">
+      <div class="container">
+        <h2>Hubungi Saya</h2>
+        <p><strong>Email:</strong><a> alexa39dmynti@gmail.com</a></p>
+        <p><strong>Phone:</strong> +62 895-0521-7257</p>
+      </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Alexa. Semua Hak Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script>
+        const sections = document.querySelectorAll('.fade-up');
+        window.addEventListener('scroll', () => {
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (sectionTop <= windowHeight - 100) {
+                    section.classList.add('visible');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
